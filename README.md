@@ -1,6 +1,8 @@
 # task_flutter
+![image](https://user-images.githubusercontent.com/74234131/123456385-c7eb9e80-d5b0-11eb-8510-8d5c6dd865c3.png)
 
-A new Flutter application.
+
+This is a Flutter Application UI.
 
 ## Getting Started
 
