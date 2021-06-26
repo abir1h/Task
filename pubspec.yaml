@@ -24,11 +24,14 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
+  table_calendar: ^3.0.0
+  math_expressions: ^2.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_simple_calculator: ^2.0.0-nullsafety.1
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +46,16 @@ flutter:
     - Images/map.png
     - Images/dictionary.png
     - Images/bulb.png
+    - Images/book1.jpg
+    - Images/book2.jpg
+    - Images/book3.jpg
+    - Images/book4.jpg
+    - Images/book5.jpg
+    - Images/book6.jpg
+    - Images/book7.jpg
+    - Images/book8.jpg
+    - Images/book9.jpg
+    - Images/book10.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
