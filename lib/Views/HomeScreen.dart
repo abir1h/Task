@@ -218,11 +218,7 @@ class _Home_screenState extends State<Home_screen> {
                       child: Stack(
                         children: <Widget>[
                           Center(
-                            child: Icon(
-                              Icons.perm_contact_calendar,
-                              size: 60,
-                              color: Colors.white24,
-                            ),
+                            child: Image.asset('Images/dictionary.png', color: Colors.white24,height: 50,),
                           ),
                           Container(
                             alignment: Alignment.center,
@@ -293,11 +289,7 @@ class _Home_screenState extends State<Home_screen> {
                       child: Stack(
                         children: <Widget>[
                           Center(
-                            child: Icon(
-                              Icons.perm_contact_calendar,
-                              size: 60,
-                              color: Colors.white24,
-                            ),
+                            child: Image.asset('Images/bulb.png', color: Colors.white24,height: 60,),
                           ),
                           Container(
                             alignment: Alignment.center,
