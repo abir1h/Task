@@ -282,7 +282,7 @@ class _Home_screenState extends State<Home_screen> {
                     ),
                     GestureDetector(
                       onTap: (){
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>CalcButton()));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>CalcApp()));
                       },
                       child: Card(
                         shape: RoundedRectangleBorder(
