@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_flutter/Views/HomeScreen.dart';
-import 'package:task_flutter/Views/Rough.dart';
-import 'package:task_flutter/models/topic_data.dart';
+import 'package:task_flutter/Views/Qusbnk_qustions.dart';
+import 'package:task_flutter/models/QustientBank.dart';
 
-import 'Library_books_topic.dart';
-class Library_books extends StatefulWidget {
+import 'Rough.dart';
+class qustionBnk extends StatefulWidget {
   @override
-  _Library_booksState createState() => _Library_booksState();
+  _qustionBnkState createState() => _qustionBnkState();
 }
 
-class _Library_booksState extends State<Library_books> {
+class _qustionBnkState extends State<qustionBnk> {
   List<topic_> topics = List<topic_>();
-  @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    topics=getLibraryTopic();
+    topics=getQustionbankSubjects();
   }
   @override
   Widget build(BuildContext context) {
@@ -24,25 +22,28 @@ class _Library_booksState extends State<Library_books> {
     final double itemHeight = (size.height - kToolbarHeight - 24) / 8;
     final double itemWidth = size.width / 3;
     return SafeArea(child: Scaffold(
-      appBar: AppBar(
+      appBar:  AppBar(
         elevation: 10.0,
         centerTitle: true,
         backgroundColor: Colors.white,
         leading: IconButton(
+          onPressed: (){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>rough()));
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.deepPurple,
           ),
         ),
-        title: Text("Library",
+        title: Text("Subjects",
             style: GoogleFonts.lato(
               color: Color(0xff6C63FE),
               fontSize: 26,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w900,
             )),
 
       ),
-      body: SingleChildScrollView(
+      body:  SingleChildScrollView(
         child:Padding(
           padding: const EdgeInsets.all(15.0),
           child: GridView.builder(
@@ -54,44 +55,42 @@ class _Library_booksState extends State<Library_books> {
                   mainAxisSpacing: 10),
               itemCount: topics.length,
               itemBuilder: (BuildContext ctx, index) {
-                return Library_topictile(topicname: topics[index].Topic_name,);
+                return qus_tile(topicname: topics[index].Topic_name,);
               }),
         ),
       ),
     ));
   }
 }
-class Library_topictile extends StatelessWidget {
+class qus_tile extends StatelessWidget {
   final  topicname;
-  Library_topictile({ this.topicname});
+  qus_tile({ this.topicname});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:(){
-        print('tapped');
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){
-         return Topic_books();
-        }));
+      onTap: () {
+        print("tapped on container");
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>qustionbank_qustions()));
+
       },
       child: Card(
-          elevation: 5,
-          shape: RoundedRectangleBorder(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25.0),
+        ),
 
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          child: Container(
+        child: Container(
+          alignment: Alignment.center,
 
-            alignment: Alignment.center,
-            height: 30,
-            width: 70,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5), color: Color(0xff6C63FE)),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5), color: Color(0xff6C63FE)),
+          child: Center(
             child: Text(
               topicname,
-              style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900,fontSize: 26),
+              style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 24),
             ),
-          )
+          ),
+        ),
       ),
     );
   }

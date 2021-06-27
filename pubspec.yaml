@@ -26,6 +26,13 @@ dependencies:
   google_fonts: ^2.1.0
   table_calendar: ^3.0.0
   math_expressions: ^2.1.1
+  widget_spinner: ^0.0.3
+  flutter_toggle_tab: ^1.1.4
+  flutter_svg: ^0.22.0
+  http: ^0.13.3
+
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -56,6 +63,21 @@ flutter:
     - Images/book8.jpg
     - Images/book9.jpg
     - Images/book10.jpg
+    - Images/bangla.jpg
+    - Images/english.jpg
+    - Images/biology.jpg
+    - Images/accounting.jpg
+    - Images/business.jpg
+    - Images/finance.jpg
+    - Images/islam.jpg
+    - Images/math.jpg
+    - Images/sceince_p.jpg
+    - Images/science.png
+    - Images/physics.png
+    - Images/Pdf.png
+    - Images/image.png
+    - Images/audio_waves.svg
+    - Images/audioBooksw.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

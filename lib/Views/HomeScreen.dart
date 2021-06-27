@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_flutter/Alerts& diDialogs/Dialog_Helper.dart';
+import 'package:task_flutter/Views/Rough.dart';
+import 'Dictionary.dart';
 import 'Genarel_knowledge.dart';
 import 'Calender.dart';
 import 'Calculator.dart';
@@ -94,9 +96,15 @@ class _Home_screenState extends State<Home_screen> {
                 clipBehavior: Clip.none,
 
                 children: [
-                  Image.asset(
-                    'Images/map.png',
-                    height: height / 5,
+                  GestureDetector(
+                    onTap: (){
+                      print("tapped");
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>rough()));
+                    },
+                    child: Image.asset(
+                      'Images/map.png',
+                      height: height / 5,
+                    ),
                   ),
                   Container(
                     child: CustomPaint(
@@ -228,25 +236,31 @@ class _Home_screenState extends State<Home_screen> {
                   crossAxisCount: 2,
                   shrinkWrap: true,
                   children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                     color: Color(0xff6C63FE),
-                      child: Stack(
-                        children: <Widget>[
-                          Center(
-                            child: Image.asset('Images/dictionary.png', color: Colors.white24,height: 50,),
-                          ),
-                          Container(
-                            alignment: Alignment.center,
-                            child: Text('Dictionary',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                )),
-                          )
-                        ],
+                    GestureDetector(
+                      onTap: () {
+                        print("tapped on container");
+                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>dictionary()));
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                       color: Color(0xff6C63FE),
+                        child: Stack(
+                          children: <Widget>[
+                            Center(
+                              child: Image.asset('Images/dictionary.png', color: Colors.white24,height: 50,),
+                            ),
+                            Container(
+                              alignment: Alignment.center,
+                              child: Text('Dictionary',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                  )),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     GestureDetector(
